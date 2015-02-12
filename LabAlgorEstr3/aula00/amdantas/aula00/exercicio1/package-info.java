@@ -5,4 +5,4 @@
  * @author Andre
  *
  */
-package amdantas.javabasico;
+package amdantas.aula00.exercicio1;

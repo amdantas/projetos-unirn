@@ -5,4 +5,4 @@
  * @author Andre
  *
  */
-package amdantas.estruturas.testes;
+package amdantas.aula00.exercicio2;

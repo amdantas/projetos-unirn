@@ -5,4 +5,4 @@
  * @author Andre
  *
  */
-package amdantas.estruturas;
+package amdantas.util;
