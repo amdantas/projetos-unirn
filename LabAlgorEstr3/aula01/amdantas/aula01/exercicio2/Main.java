@@ -1,12 +1,13 @@
 package amdantas.aula01.exercicio2;
 
 import static amdantas.util.Util.exibirMsg;
-import static amdantas.util.Util.lerEntrada;
+
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
+		Scanner scan = new Scanner(System.in);
 		Integer[] vetor = new Integer[4];
 		
 		for (int i = 0; i < vetor.length; i++) {
@@ -16,12 +17,14 @@ public class Main {
 				if (!entradaValida) {
 					msg = "Entrada inválida!\r\n" + msg;
 				}
-				
-				String entrada = lerEntrada(msg);
+				entradaValida = true;
+				System.out.println(msg);
 				try {
-					vetor[i] = Integer.parseInt(entrada);
-				} catch (NumberFormatException e) {
+//					String entrada = scan.next();
+					vetor[i] = scan.nextInt();
+				} catch (Exception e) {
 					entradaValida = false;
+					scan.nextLine();
 				}
 			} while (!entradaValida);
 		}

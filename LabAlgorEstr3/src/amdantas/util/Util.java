@@ -17,4 +17,9 @@ public class Util {
 		showMessageDialog(null, msg);
 	}
 	
+	public static boolean seForInteiro (String s) {
+		
+		return true;
+	}
+	
 }
