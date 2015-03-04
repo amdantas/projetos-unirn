@@ -1,36 +1,23 @@
 package amdantas.aula03.exercicio03;
 
-import amdantas.estruturas.Elemento;
-import amdantas.estruturas.ListaEncadeada;
+import amdantas.estruturas.ElementoInteiro;
+import amdantas.estruturas.ListaEncadeadaInteiro;
 
 public class Main {
 
 	public static void main(String[] args) {
+		int[] vetor =  {4, 6, 8, 9};
 		
-		ListaEncadeada lista = new ListaEncadeada();
-		
-		lista.adiciona(new Elemento("André"));
-		lista.adiciona(new Elemento("João"));
-		lista.adiciona(new Elemento("Marco"));
-		lista.adiciona(new Elemento("Maria"));
-		
+		ListaEncadeadaInteiro lista = transformarEmLista(vetor);
 		lista.exibirLista();
-		
-		ListaEncadeada listaInvertida = inverterLista(lista);
-		listaInvertida.exibirLista();
-		
 	}
 
-	private static ListaEncadeada inverterLista(ListaEncadeada lista) {
-		ListaEncadeada invertida = new ListaEncadeada();
-		Elemento elem = lista.getUltimo();
-		invertida.adiciona(elem);
-		Elemento apontado = lista.quemAponta(elem);
-		while (apontado !=null) {
-			invertida.adiciona(apontado);
-			apontado = lista.quemAponta(apontado);
+	private static ListaEncadeadaInteiro transformarEmLista(int[] vetor) {
+		ListaEncadeadaInteiro lista = new ListaEncadeadaInteiro();
+		for (int i : vetor) {
+			lista.adiciona(new ElementoInteiro(i));
 		}
-		return invertida;
+		return lista;
 	}
-
+	
 }
