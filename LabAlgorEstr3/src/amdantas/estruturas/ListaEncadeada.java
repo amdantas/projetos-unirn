@@ -33,6 +33,10 @@ public class ListaEncadeada {
 	}
 
 	public void exibirLista() {
+		if (totalDeElementos == 0) {
+			System.out.println("Lista vazia");
+			return;
+		}
 		String lista = "";
 		Elemento elem = primeiro;
 		do {
@@ -106,6 +110,20 @@ public class ListaEncadeada {
 			elem = elem.getProximo();
 		} while (elem  != null);
 		return null;
+	}
+
+	public void exibirListaComRecursividade() {
+		if (totalDeElementos > 0)
+			exibirElemento(primeiro);
+		else
+			System.out.println("Lista vazia");
+	}
+
+	private void exibirElemento(Elemento e) {
+		if (e == null)
+			return;
+		System.out.print("["+ e.getInfo() + "] " );
+		exibirElemento(e.getProximo());
 	}
 	
 	
