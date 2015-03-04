@@ -6,6 +6,9 @@ public class Elemento {
 	
 	private Elemento proximo;
 
+	public Elemento () {
+	}
+	
 	public Elemento (String s) {
 		info = s;
 	}
