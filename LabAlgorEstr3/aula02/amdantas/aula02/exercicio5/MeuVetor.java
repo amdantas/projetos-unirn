@@ -1,8 +1,6 @@
 package amdantas.aula02.exercicio5;
 
 public class MeuVetor {
-
-	
 	private int[] v;
 	
 	public MeuVetor(int tamanho) {
