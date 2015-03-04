@@ -7,6 +7,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		ListaEncadeada lista = new ListaEncadeada();
+		Elemento e1 = new Elemento();
+		e1.setInfo("elemento 1");
+		lista.adiciona(e1);
+
+		Elemento e2 = new Elemento();
+		e1.setInfo("elemento 2");
+		lista.adiciona(e2);
+		
+		Elemento e3 = new Elemento();
+		e1.setInfo("elemento 3");
+		lista.adiciona(e3);
 		
 		lista.adiciona(new Elemento("elemento 1"));
 		lista.adiciona(new Elemento("elemento 2"));
