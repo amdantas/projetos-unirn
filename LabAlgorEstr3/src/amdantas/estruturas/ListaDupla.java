@@ -17,6 +17,48 @@ public class ListaDupla {
 			e.setAnterior(ultimo);
 		}
 	}
+
+	public int getTamanho() {
+		int tamanho = 0;
+		ElementoDuplo elem = elementoPrincipal;
+		while (elem  != null) {
+			tamanho++;
+			elem = elem.getProximo();
+		} 
+		return tamanho;
+	}
+	
+	public void adicionar(int posicao, ElementoDuplo e) {
+		int tamanho = getTamanho();
+		if (posicao <= 0 || posicao > tamanho + 1) {
+			System.out.println("Posição inválida");
+			return;
+		}
+		if (isVazia()) {
+			e.setProximo(null);
+			e.setAnterior(null);
+			elementoPrincipal = e;
+		} else {
+			ElementoDuplo elementoDaPosicao = buscar(posicao);
+			ElementoDuplo anteriorDaLista = elementoDaPosicao.getAnterior();
+			elementoDaPosicao.setAnterior(e);
+			e.setProximo(elementoDaPosicao);
+			e.setAnterior(anteriorDaLista);
+			if (anteriorDaLista != null) {
+				anteriorDaLista.setProximo(e);
+			}
+			if (posicao == 1)
+				elementoPrincipal = e;
+		}
+	}
+	
+	
+	
+	public boolean removerUltimo () {
+		return remover(getUltimo());
+	}
+	
+	
 	
 	public boolean remover (ElementoDuplo e) {
 		if (isVazia())
@@ -55,6 +97,18 @@ public class ListaDupla {
 		return null;
 	}
 	
+	public ElementoDuplo buscar (int posicao) {
+		int cont = 0;
+		ElementoDuplo elem = elementoPrincipal;
+		while (elem  != null) {
+			cont ++;
+			if (posicao == cont)
+				return elem;
+			elem = elem.getProximo();
+		} 
+		return null;
+	}
+	
 	private ElementoDuplo getUltimo() {
 		ElementoDuplo elem = elementoPrincipal;
 		do {
@@ -67,7 +121,6 @@ public class ListaDupla {
 
 	public boolean isVazia() {
 		return elementoPrincipal == null;
-		
 	}
 	
 	public void exibir() {
