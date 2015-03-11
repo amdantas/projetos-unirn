@@ -26,6 +26,7 @@ public class Main {
 		lista.adiciona(new Elemento("elemento 5"));
 		
 		lista.exibirLista();
+		lista.exibirListaComRecursividade();
 		System.out.println(lista.busca(0));
 		System.out.println(lista.busca(3).getInfo());
 		System.out.println(lista.busca(6));

@@ -84,18 +84,20 @@ public class ListaEncadeada {
 			Elemento elem = primeiro;
 			Elemento anterior = primeiro;
 			do {
+				boolean achado = false;
 				if (elem.getInfo().equals(e.getInfo())) {
 					if (elem == primeiro) {
-						primeiro = elem.getProximo().getProximo();
+						primeiro = elem.getProximo();
 					} else if (elem == ultimo) {
 						ultimo = anterior;
 						ultimo.setProximo(null);
 					} else {
 						anterior.setProximo(elem.getProximo());
 					}
-					return true;
+					achado = true;
 				}
-				anterior = elem;
+				if (!achado)
+					anterior = elem;
 				elem = elem.getProximo();
 			} while (elem  != null);
 		} 
