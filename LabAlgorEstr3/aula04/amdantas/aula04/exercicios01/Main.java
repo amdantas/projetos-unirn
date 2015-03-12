@@ -1,3 +1,4 @@
+package amdantas.aula04.exercicios01;
 import amdantas.estruturas.ElementoDuplo;
 import amdantas.estruturas.ListaDupla;
 
