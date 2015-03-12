@@ -2,7 +2,7 @@ package amdantas.estruturas;
 
 public class ElementoDuplo   {
 
-	private String info;
+	private Object info;
 	
 	private ElementoDuplo proximo;
 
@@ -15,11 +15,19 @@ public class ElementoDuplo   {
 		info = s;
 	}
 	
-	public String getInfo() {
+	public ElementoDuplo(int i) {
+		info = new Integer(i);
+	}
+
+	public ElementoDuplo(Object o) {
+		info = o;
+	}
+
+	public Object getInfo() {
 		return info;
 	}
 
-	public void setInfo(String info) {
+	public void setInfo(Object info) {
 		this.info = info;
 	}
 

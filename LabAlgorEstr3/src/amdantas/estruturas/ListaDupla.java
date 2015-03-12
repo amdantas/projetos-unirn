@@ -38,6 +38,11 @@ public class ListaDupla {
 			e.setProximo(null);
 			e.setAnterior(null);
 			elementoPrincipal = e;
+		} else if (posicao == tamanho + 1) {
+			ElementoDuplo ultimo = getUltimo();
+			ultimo.setProximo(e);
+			e.setAnterior(ultimo);
+			e.setProximo(null);
 		} else {
 			ElementoDuplo elementoDaPosicao = buscar(posicao);
 			ElementoDuplo anteriorDaLista = elementoDaPosicao.getAnterior();
@@ -65,7 +70,7 @@ public class ListaDupla {
 			return false;
 		
 		
-		ElementoDuplo elem = buscar(e.getInfo());
+		ElementoDuplo elem = buscar(e.getInfo()+"");
 		if (elem != null) {
 			if (elementoPrincipal == elem ) {
 				// está removendo o primeiro
@@ -137,5 +142,24 @@ public class ListaDupla {
 		} while (elem  != null);
 		
 		System.out.println(lista);
+	}
+
+	public void adicionaOrdenado(ElementoDuplo e) {
+		ElementoDuplo elem = elementoPrincipal;
+		int posicao = 1;
+		while (elem != null) {
+			Comparable o = (Comparable) elem.getInfo();
+			if (o.compareTo(e.getInfo()) >= 0 ) {
+				break;
+			}
+			elem = elem.getProximo();
+			posicao++;
+		}
+		adicionar(posicao, e);
+		
+	}
+
+	public ElementoDuplo getElementoPrincipal() {
+		return elementoPrincipal;
 	}
 }

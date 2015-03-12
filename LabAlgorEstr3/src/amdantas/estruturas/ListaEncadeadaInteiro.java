@@ -98,6 +98,5 @@ public class ListaEncadeadaInteiro {
 		return false;
 	}
 	
-	
 
 }
