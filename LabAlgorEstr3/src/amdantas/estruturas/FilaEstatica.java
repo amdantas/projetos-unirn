@@ -1,10 +1,10 @@
 package amdantas.estruturas;
 
-public class Fila {
+public class FilaEstatica {
 
 	private String[] vetorInterno;
 	
-	public Fila(int tamanho) {
+	public FilaEstatica(int tamanho) {
 		vetorInterno = new String[tamanho];
 	}
 	

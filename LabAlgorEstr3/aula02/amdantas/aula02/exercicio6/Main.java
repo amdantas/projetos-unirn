@@ -1,13 +1,13 @@
 package amdantas.aula02.exercicio6;
 
-import amdantas.estruturas.Fila;
+import amdantas.estruturas.FilaEstatica;
 
 public class Main {
 
 	
 	public static void main(String[] args) {
 		
-		Fila fila = new Fila(3);
+		FilaEstatica fila = new FilaEstatica(3);
 		
 		System.out.println(fila);
 		fila.inserir("teste1");
