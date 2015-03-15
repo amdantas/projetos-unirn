@@ -92,7 +92,6 @@ public class ListaDupla {
 	}
 	
 	public ElementoDuplo buscar (String info) {
-		
 		ElementoDuplo elem = elementoPrincipal;
 		do {
 			if (elem.getInfo().equals(info))
@@ -101,7 +100,6 @@ public class ListaDupla {
 		} while (elem  != null);
 		return null;
 	}
-	
 	public ElementoDuplo buscar (int posicao) {
 		int cont = 0;
 		ElementoDuplo elem = elementoPrincipal;
