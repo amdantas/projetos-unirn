@@ -70,14 +70,20 @@ public class ListaDupla {
 			return false;
 		
 		
+		Integer i = new Integer(3); 
+		Integer j = new Integer(3);
+		
+		System.out.println(i == j);
+		System.out.println(i.intValue() == j.intValue());
+		
 		ElementoDuplo elem = buscar(e.getInfo()+"");
+		ElementoDuplo ultimoElemento = getUltimo();
 		if (elem != null) {
 			if (elementoPrincipal == elem ) {
 				// está removendo o primeiro
-				ElementoDuplo proximo = elem.getProximo();
-				elementoPrincipal = proximo;
+				elementoPrincipal = elem.getProximo();
 				elementoPrincipal.setAnterior(null);
-			} else if (elem == getUltimo()) {
+			} else if (elem == ultimoElemento) {
 				// removendo o último
 				ElementoDuplo anterior = elem.getAnterior();
 				anterior.setProximo(null);
@@ -87,6 +93,7 @@ public class ListaDupla {
 				anterior.setProximo(proximo);
 				proximo.setAnterior(anterior);
 			}
+			return true;
 		}
 		return false;
 	}
