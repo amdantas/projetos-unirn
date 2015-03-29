@@ -16,7 +16,7 @@ public class Main {
 		ListaDupla ordenada = new ListaDupla();
 		ElementoDuplo e = l.getElementoPrincipal();
 		while (e != null) {
-			ordenada.adicionaOrdenado(new ElementoDuplo(e.getInfo()));
+			ordenada.adicionaOrdenadoSimples(new ElementoDuplo(e.getInfo()));
 			e = e.getProximo();
 		}
 		ordenada.exibir();
