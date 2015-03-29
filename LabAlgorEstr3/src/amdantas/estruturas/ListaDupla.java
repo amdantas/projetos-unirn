@@ -121,11 +121,11 @@ public class ListaDupla {
 	
 	private ElementoDuplo getUltimo() {
 		ElementoDuplo elem = elementoPrincipal;
-		do {
+		while (elem  != null) {
 			if (elem.getProximo() == null )
 				return elem;
 			elem = elem.getProximo();
-		} while (elem  != null);
+		} ;
 		return null;
 	}
 
@@ -164,6 +164,33 @@ public class ListaDupla {
 		
 	}
 
+	public void adicionaOrdenadoSimples(ElementoDuplo novo) {
+		ElementoDuplo aux = elementoPrincipal;
+		while (aux != null) {
+			Comparable o = (Comparable) aux.getInfo();
+			if (o.compareTo(novo.getInfo()) >= 0 ) {
+				novo.setProximo(aux);
+				novo.setAnterior(aux.getAnterior());
+				if (aux.getAnterior() != null)
+					aux.getAnterior().setProximo(novo);
+				aux.setAnterior(novo);
+				if (aux == elementoPrincipal)
+					elementoPrincipal = novo;
+				return;
+			}
+			aux = aux.getProximo();
+		}
+		if (aux == null) {
+			ElementoDuplo ultimo = getUltimo();
+			novo.setProximo(null);
+			novo.setAnterior(ultimo);
+			if (ultimo != null)
+				ultimo.setProximo(novo);
+			else
+				this.elementoPrincipal = novo;
+		}
+	}
+	
 	public ElementoDuplo getElementoPrincipal() {
 		return elementoPrincipal;
 	}
