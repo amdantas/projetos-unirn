@@ -30,7 +30,8 @@ public class Main {
 		System.out.println(lista.busca(0));
 		System.out.println(lista.busca(3).getInfo());
 		System.out.println(lista.busca(6));
-		System.out.println(lista.busca("elemento 5").getInfo());
+		Elemento obj = lista.busca("elemento 5");
+		System.out.println(obj.getInfo());
 		System.out.println(lista.contem(new Elemento("elemento 5")));
 		System.out.println(lista.contem(new Elemento("elemento 05")));
 		

@@ -16,6 +16,11 @@ public class Pilha {
 		return e;
 	}
 	
+	public int soma(int i1, int i3) {
+		int s  = i1 + i3;
+		return s;
+	}
+	
 	@Override
 	public String toString() {
 		String s = "";

@@ -91,6 +91,7 @@ public class ListaEncadeada {
 					} else if (elem == ultimo) {
 						ultimo = anterior;
 						ultimo.setProximo(null);
+						anterior.setProximo(null);
 					} else {
 						anterior.setProximo(elem.getProximo());
 					}
@@ -125,7 +126,8 @@ public class ListaEncadeada {
 		if (e == null)
 			return;
 		System.out.print("["+ e.getInfo() + "] " );
-		exibirElemento(e.getProximo());
+		Elemento prox = e.getProximo();
+		exibirElemento(prox );
 	}
 	
 	

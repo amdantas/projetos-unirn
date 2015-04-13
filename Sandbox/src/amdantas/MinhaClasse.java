@@ -2,6 +2,11 @@ package amdantas;
 
 public class MinhaClasse implements ComportamentoPadraoInt {
 
+	
+	public void novaOperacao() {
+		System.out.println("Executando novaOperacao em MinhaClasse");
+	}
+	
 	@Override
 	public void operacao1() {
 		System.out.println("Executando operacao1 em MinhaClasse");
