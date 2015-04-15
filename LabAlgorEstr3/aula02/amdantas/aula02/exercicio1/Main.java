@@ -9,7 +9,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Animal[] animais = new Animal[QTD_ANIMAIS];
 		
 		for (int i = 0; i < QTD_ANIMAIS; i++) {
 			
@@ -34,21 +33,16 @@ public class Main {
 			
 			animal.setNomeAnimal(lerEntrada("Nome do animal?"));
 			animal.setNomeDono(lerEntrada("Nome do dono?"));
-			animais[i] = animal;
+//			animais[i] = animal;
 		}
 		StringBuilder msg = new StringBuilder("Resultado:\r\n");
+		Animal[] animais = new Animal[QTD_ANIMAIS];
 		for (int i = 0; i < animais.length; i++) {
-			boolean ehCachorro = animais[i] instanceof Cachorro;
-			msg.append("Animal " + (i+1)+": " + (ehCachorro?"Cachorro":"Gato") + "\r\n");
-			if (ehCachorro) {
+			if (animais[i] instanceof Cachorro) {
 				Cachorro c = (Cachorro) animais[i];
-				msg.append("Nome do cachorro: " + c.getNomeAnimal() + "\r\n");
-				msg.append("Nome do dono do cachorro: " + c.getNomeDono() + "\r\n");
 				c.late();
-			} else {
+			} else if (animais[i] instanceof Gato) {
 				Gato g = (Gato) animais[i];
-				msg.append("Nome do gato: " + g.getNomeAnimal() + "\r\n");
-				msg.append("Nome do dono do gato: " + g.getNomeDono() + "\r\n");
 				g.mia();
 			}
 		}

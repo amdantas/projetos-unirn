@@ -21,15 +21,9 @@ public class Main {
 //		}
 		
 		Animal[] animais = new Animal[3];
-		animais[0] = new Cachorro();
-		animais[0] = new Gato();
-		animais[0] = new Cachorro();
-		
 		for (int i = 0; i < animais.length; i++) {
 			Animal a = animais[i];
 			a.emitirSom();
-			a.comer();
-			a.caminhar();
 		}
 		
 		ComportamentoAnimalInt[] criaturas = new ComportamentoAnimalInt[3];
