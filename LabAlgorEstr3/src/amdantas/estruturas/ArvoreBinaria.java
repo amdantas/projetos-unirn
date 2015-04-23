@@ -2,7 +2,7 @@ package amdantas.estruturas;
 
 public class ArvoreBinaria {
 
-	private NoArvore raiz;
+	protected NoArvore raiz;
 	
 	private int soma;
 	
@@ -24,22 +24,23 @@ public class ArvoreBinaria {
 	
 	private void exibirPosOrdem(NoArvore no) {
 		if (no != null) {
-			exibirPreOrdem(no.getEsquerda());
-			exibirPreOrdem(no.getDireita());
+			exibirPosOrdem(no.getEsquerda());
+			exibirPosOrdem(no.getDireita());
 			System.out.print("["+no.getInfo()+"]");
 		}
 	}
 	
 	private void exibirEmOrdem(NoArvore no) {
 		if (no != null) {
-			exibirPreOrdem(no.getEsquerda());
+			exibirEmOrdem(no.getEsquerda());
 			System.out.print("["+no.getInfo()+"]");
-			exibirPreOrdem(no.getDireita());
+			exibirEmOrdem(no.getDireita());
 		}
 	}
 	
 	public void exibirEmOrdem() {
 		exibirEmOrdem(raiz);
+		System.out.println();
 	}
 	
 	public void inserirNo(int novoInfo) {
@@ -59,7 +60,7 @@ public class ArvoreBinaria {
 			} else {
 				inserirNo(no.getEsquerda(), novoInfo);
 			}
-		} else {
+		} else if (novoInfo > no.getInfo()) {
 			if (no.getDireita() == null) {
 				NoArvore novo = new NoArvore(novoInfo);
 				novo.setNoPai(no);
@@ -99,7 +100,7 @@ public class ArvoreBinaria {
 		}
 	}
 	
-	private NoArvore getMaisProfundoEsquerdo(NoArvore no) {
+	protected NoArvore getMaisProfundoEsquerdo(NoArvore no) {
 		if (no.getEsquerda() == null)
 			return no;
 		return getMaisProfundoEsquerdo(no.getEsquerda());
