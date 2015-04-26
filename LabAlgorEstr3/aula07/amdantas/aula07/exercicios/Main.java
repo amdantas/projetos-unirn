@@ -25,7 +25,9 @@ public class Main {
 		System.out.println(a.buscar(13).getInfo());
 		System.out.println(a.buscar(333));
 		System.out.println("soma: " + a.somaTodos());
+		a.exibirEmOrdem();
 		a.remover(10);
+		System.out.println("removeu 10");
 		System.out.println("Em ordem");
 		a.exibirEmOrdem();
 		

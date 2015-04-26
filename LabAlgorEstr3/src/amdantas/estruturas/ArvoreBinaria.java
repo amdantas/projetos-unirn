@@ -33,12 +33,13 @@ public class ArvoreBinaria {
 	private void exibirEmOrdem(NoArvore no) {
 		if (no != null) {
 			exibirEmOrdem(no.getEsquerda());
-			System.out.print("["+no.getInfo()+"]");
+			System.out.print(no);
 			exibirEmOrdem(no.getDireita());
 		}
 	}
 	
 	public void exibirEmOrdem() {
+		System.out.println("Raiz; " + raiz);
 		exibirEmOrdem(raiz);
 		System.out.println();
 	}
@@ -73,38 +74,41 @@ public class ArvoreBinaria {
 	
 	public void remover(int info) {
 		NoArvore no = buscar(info);
-		if (no.getEsquerda() == null && no.getDireita() == null) {
+		if (no.isSemFilho()) {
 			//Nó possui duas sub-árvores vazias
-			NoArvore noPai = no.getNoPai();
-			if (noPai.getEsquerda() == no)
-				noPai.setEsquerda(null);
-			else
-				noPai.setDireita(null);
+			removerNoSemFilho(no);
 		} else if (no.getEsquerda() != null && no.getDireita() != null) {
 			//Nó possui duas sub-árvores cheias
-			NoArvore sucessor = getMaisProfundoEsquerdo(no.getDireita());
+			NoArvore sucessor = no.getSucessor();
 			no.setInfo(sucessor.getInfo());
-			NoArvore paiSucessor = sucessor.getNoPai();
-			if (paiSucessor.getEsquerda() == sucessor)
-				paiSucessor.setEsquerda(null);
-			else
-				paiSucessor.setDireita(null);
+			if (sucessor.isSemFilho()) {
+				removerNoSemFilho(sucessor);
+			} else {
+				removerNoComUmFilho(sucessor);
+			}
 		} else {
 			//Nó possui UMA das sub-árvores vazias
-			NoArvore noFilho = no.getEsquerda() != null ? no.getEsquerda() : no.getDireita(); 
-			NoArvore noPai = no.getNoPai();
-			if (noPai.getEsquerda() == no)
-				noPai.setEsquerda(noFilho);
-			else
-				noPai.setDireita(noFilho);
+			removerNoComUmFilho(no);
 		}
 	}
 	
-	protected NoArvore getMaisProfundoEsquerdo(NoArvore no) {
-		if (no.getEsquerda() == null)
-			return no;
-		return getMaisProfundoEsquerdo(no.getEsquerda());
+	private void removerNoComUmFilho(NoArvore no) {
+		NoArvore noFilho = no.getEsquerda() != null ? no.getEsquerda() : no.getDireita(); 
+		NoArvore noPai = no.getNoPai();
+		if (noPai.getEsquerda() == no)
+			noPai.setEsquerda(noFilho);
+		else
+			noPai.setDireita(noFilho);		
 	}
+
+	private void removerNoSemFilho(NoArvore no) {
+		NoArvore noPai = no.getNoPai();
+		if (noPai.getEsquerda() == no)
+			noPai.setEsquerda(null);
+		else
+			noPai.setDireita(null);		
+	}
+
 
 	public int somaTodos() {
 		soma = 0;

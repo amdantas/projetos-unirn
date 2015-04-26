@@ -27,6 +27,18 @@ public class Main {
 		a.exibirEmOrdem();
 		a.inserirBalanceado(3);
 		a.exibirEmOrdem();
+//		a.inserirBalanceado(90);
+//		a.exibirEmOrdem();
+//		a.inserirBalanceado(99);
+//		a.exibirEmOrdem();
+//		a.inserirBalanceado(80);
+//		a.exibirEmOrdem();
+//		a.inserirBalanceado(98);
+//		a.exibirEmOrdem();
+//		a.inserirBalanceado(70);
+//		a.exibirEmOrdem();
+//		a.inserirBalanceado(60);
+//		a.exibirEmOrdem();
 	}
 	
 }
