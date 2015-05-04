@@ -1,0 +1,42 @@
+Revisão:155557
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/ProjetoMonitoria/meus_projetos.jsp
+U   trunk/SIGAA/geral/br/ufrn/sigaa/bolsas/negocio/ProcessadorBolsaAcademica.java
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:150707
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/DiscenteMonitoria/homologacao_bolsa_discente.jsp
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:150868
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/DiscenteMonitoria/homologacao_bolsa_discente.jsp
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:149115
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:155635
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:155672
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/DiscenteMonitoria/homologacao_bolsa_discente.jsp
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:151653
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/index.jsp
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java
+
+
+Revisão:149113
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/DiscenteMonitoria/homologacao_bolsa_discente.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/index.jsp
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/extensao/DiscenteExtensaoDao.java
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/monitoria/DiscenteMonitoriaDao.java
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/pesquisa/MembroProjetoDiscenteDao.java
+U   trunk/SIGAA/geral/br/ufrn/sigaa/bolsas/negocio/ProcessadorBolsaAcademica.java
+U   trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java

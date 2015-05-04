@@ -1,0 +1,16 @@
+trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/DiscenteMonitoria/homologacao_bolsa_discente.jsp - [149113, 150707, 150868, 155672]
+
+trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/ProjetoMonitoria/meus_projetos.jsp - [155557]
+
+trunk/SIGAA/app/sigaa.ear/sigaa.war/monitoria/index.jsp - [149113, 151653]
+
+trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/extensao/DiscenteExtensaoDao.java - [149113]
+
+trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/monitoria/DiscenteMonitoriaDao.java - [149113]
+
+trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/pesquisa/MembroProjetoDiscenteDao.java - [149113]
+
+trunk/SIGAA/geral/br/ufrn/sigaa/bolsas/negocio/ProcessadorBolsaAcademica.java - [149113, 155557]
+
+trunk/SIGAA/monitoria/br/ufrn/sigaa/monitoria/jsf/HomologacaoBolsistaMonitoriaMBean.java - [149113, 149115, 150707, 150868, 151653, 155557, 155635, 155672]
+
