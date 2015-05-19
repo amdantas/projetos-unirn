@@ -1,274 +1,121 @@
 trunk/SIGAA/app/sigaa.ear/sigaa.war/WEB-INF/jsp/include/beta/include/discente/menu.jsp - [176646]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/Biblioteca/form.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/avisoReservaMaterial.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/confirmaReservaMaterialBiblioteca.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/devolucao.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/listaBibliotecasDisponiveisParaReservaMaterial.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/visualizaReservasMateriaisBibliotecaDeUmTitulo.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/visualizaReservasMaterialBibliotecaDeUmUsuario.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/listaParametrosCirculacaoSistemaBiblioteca.jsp - [176586, 176586]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/menus/modulo_biblioteca_servidor.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/processos_tecnicos/pesquisas_acervo/pesquisa_interna/buscaInternaAcervo.jsp - [177143]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/ - [170979]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/alteraComponenteCurricularRede.jsp - [170979]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/cadastroComponenteCurricularRede.jsp - [170979, 171715]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/listaComponenteCurricularRede.jsp - [170979, 171715, 171850, 172967]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/ - [172182, 172182]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp - [172182, 172182, 172250, 172250, 172967, 174514, 174580]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/alteraCurriculoRede.jsp - [172967, 173337, 174514]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp - [172182, 172182, 172250, 172250, 172967, 174514, 174580]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp - [172182, 172182, 172250, 172250, 172967, 174514, 174580]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/listaCurriculoRede.jsp - [172967, 174514, 174580]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/modulo/menu.jsp - [170979, 172182, 172182, 172967]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/portais/discente/menu_discente.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/portais/docente/menu_docente.jsp - [176572]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosObservacoesAcordosCooperacao.jsp - [178413, 178533]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosObservacoesRedesDeCooperacao.jsp - [178367, 178412]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosRelatorioAcordosCooperacaoInternacional.jsp - [178568, 178570, 178672]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/formObservacoesAcordosCooperacao.jsp - [178413, 178533]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/formObservacoesRedesDeCooperacao.jsp - [178367, 178412]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/form_cadastro_rede.jsp - [177458, 177559, 177610, 177636]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/lista_rede_cooperacao.jsp - [177559, 177570, 177610, 177681]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/relatorioAcordosCooperacaoInternacional.jsp - [178568]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp - [177458, 177559, 177796, 177824, 177870, 178367, 178413]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/form_proficiencia.jsp - [177823, 177962, 177993]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/lista_proficiencia.jsp - [177824, 177963, 178005]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/paginaFiltrosRelatorioMobilidadeAcademica.jsp - [177354, 177634]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/relatorioMobilidadeAcademica.jsp - [177354, 177634]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/alterarNoticia.jsp - [177796, 177869]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/form.jsp - [177796, 177869]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/lista.jsp - [176984, 177796, 177869, 177899, 177899]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/stricto/producao_academica/acompanhamento_procedimentos_apos_defesa_include.jsp - [178418]
-
 trunk/SIGAA/app/sigaa.ear/sigaa.war/stricto/versao_trabalho/lista.jsp - [178418]
-
 trunk/SIGAA/arq/br/ufrn/arq/seguranca/SigaaPapeis.java - [176672]
-
 trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml - [176672, 177458, 177796, 177823, 177869, 178367, 178413]
-
 trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java - [170979, 172182, 172182, 172967, 173337, 176672]
-
 trunk/SIGAA/arq/br/ufrn/sigaa/parametros/dominio/ParametrosBiblioteca.java - [176572]
-
 trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/BibliotecaDao.java - [176572]
-
 trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/MaterialInformacionalDao.java - [176572, 178012]
-
 trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/ReservaMaterialBibliotecaDao.java - [176572, 176586, 176586]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/dominio/ReservaMaterialBiblioteca.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/ComunicarMaterialPerdidoMBean.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/ModuloCirculacaoMBean.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/SolicitarReservaMaterialBibliotecaMBean.java - [176572, 176586, 176586, 177143]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/MovimentoSolicitaReservaMaterialBiblioteca.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorCancelaReservaMaterialBiblioteca.java - [177271]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorDesfazOperacao.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorDevolveEmprestimo.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorDevolveEmprestimoMaterialPerdido.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorEstornaEmprestimo.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimo.java - [176572, 177190, 177271, 178012]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRenovaEmprestimo.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorSolicitaReservaMaterialBiblioteca.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/remoto/BibliotecaCirculacaoDesktopRemoteServiceImpl.java - [176572, 176586, 176586]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/dominio/ServicosInformacaoReferenciaBiblioteca.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/jsf/SolicitacaoEmprestimoEntreBibliotecasMBean.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/negocio/ProcessadorAtenderSolicatacaoEmprestimoEntreBiblioteca.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/negocio/ProcessadorConfirmarRetornoMaterialEmprestimoEntreBibliotecas.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/negocio/ProcessadorSolicitaEmprestimoEntreBibliotecas.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/jsf/ConfiguraParametrosCirculacaoMBean.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/processos_tecnicos/pesquisa/jsf/DetalhesMateriaisMBean.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/publicacoes_academicas/jsf/BuscaPadraoPublicacaoAcademicaBibliotecaMBean.java - [178418]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/publicacoes_academicas/jsf/TermoAutorizacaoPublicacaoMBean.java - [178418]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/timer/VerificaReservasMaterialBibliotecaVencidasTimer.java - [176572]
-
 trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/util/ReservaMaterialBibliotecaUtil.java - [176572, 177190, 178012]
-
 trunk/SIGAA/ensino/br/ufrn/sigaa/ensino/defesa/dominio/StatusVersaoTrabalho.java - [178418]
-
 trunk/SIGAA/ensino/br/ufrn/sigaa/ensino/defesa/dominio/VersaoTrabalho.java - [178418]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoComponenteCurricularRede.java - [170979, 172182, 172182]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoEstruturaCurricularRede.java - [172182, 172182, 172967, 174580]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorComponenteCurricularRede.java - [170979, 171715, 171850, 172182, 172182]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorEstruturaCurricularRede.java - [172182, 172182, 172967, 173337]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/ComponenteCurricularRedeDao.java - [170979, 171715, 172967, 173337, 174514]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CurriculoRedeDao.java - [172967, 173337, 174580]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CursoAssociadoDao.java - [172182, 172182]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/ComponenteCurricularRede.java - [170979]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoComponenteRede.java - [172182, 172182, 173337, 174580]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoRede.java - [172182, 172182, 172967, 173337, 174580]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CursoAssociado.java - [172967]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/ProgramaRede.java - [170979]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ComponenteCurricularRedeMBean.java - [170979, 171715, 171850, 172967, 174580]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java - [172182, 172182, 172967, 173337, 174514, 174580]
-
 trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ProgramaRedeMBean.java - [170979]
-
 trunk/SIGAA/mobile/br/ufrn/sigaa/mobile/touch/jsf/BuscaAcervoTouchMBean.java - [176572]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/AcordoCooperacaoDao.java - [178413, 178533]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/NoticiasInternacionaisDao.java - [176984, 177796, 177869, 177899, 177899]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ObservacoesTarefasAcordosCooperacaoDao.java - [178413]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ObservacoesTarefasRedesCooperacaoDao.java - [178367, 178412]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ProficienciaDao.java - [177824, 177962, 177964, 177993]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/RedeCooperacaoDao.java - [177559, 177570, 177824, 178367]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiaPais.java - [176672, 177796]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiaPublicarEm.java - [176672, 177798]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionais.java - [176672, 176984, 177796, 177798, 177869]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionaisDocumentos.java - [177796]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ObservacoesTarefasAcordosCooperacao.java - [178413, 178533]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ObservacoesTarefasRedesCooperacao.java - [178367]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/Proficiencia.java - [177823, 177962]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ProgramaMobilidade.java - [177681]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/RedesCooperacao.java - [177458, 177559, 177570, 177610]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/TipoNoticia.java - [177796, 177798]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java - [176672, 176984, 177796, 177869, 177899, 177899, 177935]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasAcordosCooperacaoMBean.java - [178413, 178417, 178533]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasRedesDeCooperacaoMBean.java - [178367, 178412, 178416]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ProficienciaMBean.java - [177823, 177962, 177993]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ProgramaMobilidadeMBean.java - [177458]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RedesCooperacaoMBean.java - [177458, 177559, 177570, 177610, 177681]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioAcordosCooperacaoInternacionalMBean.java - [178568, 178570, 178672]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioMobilidadeAcademicaMBean.java - [176935, 177354]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/negocio/ProcessadorNoticiaInternacional.java - [176672, 176984, 177796, 177798]
-
 trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/struts/EntrarRelacoesInternacionaisAction.java - [176684]
-
 trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/jsf/AcompanhamentoProcedimentosAposDefesaMBean.java - [178418]
-
 trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/jsf/GerenciarTeseDissertacaoStrictoMBean.java - [178418, 178453]
-
 trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/negocio/ProcessadorVersaoTrabalho.java - [178418]
-
-trunk/SIGAATESTS/.classpath - [178456]
-
-trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/BibliotecaTestData.java - [176586, 176586]
-
-trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/CirculacaoAllTests.java - [176571]
-
-trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimoTest.java - [178012]
-
-trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorSolicitaReservaMaterialTest.java - [176571, 176642]
-
-trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/util/ReservaMaterialBibliotecaUtilTest.java - [176642]
-
-trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/util/UtilAllTests.java - [176642]
-
-trunk/SIGAATESTS/src/br/ufrn/sigaa/AllTests.java - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/ - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/ - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/ - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/StrictoSensuAllTests.java - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/negocio/ - [178456]
-
-trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/negocio/ProcessadorVersaoTrabalhoTest.java - [178456]
-

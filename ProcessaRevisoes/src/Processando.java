@@ -82,7 +82,7 @@ public class Processando {
 			for (String a : caminhos) {
 				ArrayList<String> revisoes = mapaRevisoes.get(a);
 				Collections.sort(revisoes);
-				saida.append(a + " - " + revisoes + "\r\n\r\n");
+				saida.append(a + " - " + revisoes + "\r\n");
 			}
 
 			File file = new File(NOVO_ARQUIVO);
@@ -104,11 +104,6 @@ public class Processando {
 		}
 	}
 
-	private static Map<String, ArrayList<String>> processarRevisoes(String arquivo) {
-
-		return null;
-	}
-
 	private static StringBuilder lerArquivo() {
 		BufferedReader br = null;
 		StringBuilder arquivo = new StringBuilder();
@@ -122,7 +117,7 @@ public class Processando {
 				if (sCurrentLine.contains("Revisão") && !sCurrentLine.equals(revisao)) {
 					revisao = sCurrentLine;
 				}
-				if (sCurrentLine.contains("trunk/")) {
+				if (sCurrentLine.contains("trunk/SIGAA/")) {
 					String caminho = sCurrentLine.substring(sCurrentLine.indexOf("trunk/")).trim();
 					if (mapaRevisoes.get(caminho) == null) {
 						mapaRevisoes.put(caminho, new ArrayList<String>());
