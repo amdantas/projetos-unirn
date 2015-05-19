@@ -1,0 +1,648 @@
+
+Revisão 178005 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/lista_proficiencia.jsp
+
+
+Revisão 177963 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/lista_proficiencia.jsp
+
+
+Revisão 177824 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/lista_proficiencia.jsp
+A   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ProficienciaDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/RedeCooperacaoDao.java
+
+
+Revisão 177559 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/form_cadastro_rede.jsp
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/lista_rede_cooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+A   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/RedeCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/RedesCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RedesCooperacaoMBean.java
+
+
+Revisão 177570 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/lista_rede_cooperacao.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/RedeCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/RedesCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RedesCooperacaoMBean.java
+
+
+
+Revisão 177681 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/lista_rede_cooperacao.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ProgramaMobilidade.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RedesCooperacaoMBean.java
+Revisão:177993
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/form_proficiencia.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ProficienciaDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ProficienciaMBean.java
+
+
+Revisão:177823
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/form_proficiencia.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/Proficiencia.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ProficienciaMBean.java
+
+
+Revisão:177964
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ProficienciaDao.java
+
+
+Revisão:177962
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/form_proficiencia.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ProficienciaDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/Proficiencia.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ProficienciaMBean.java
+
+
+
+<pre name="code" class="sql"> 
+CREATE TABLE internacionalizacao.proficiencia      
+(      
+  id_proficiencia integer NOT NULL,      
+  nome_proficiencia character varying(200) NOT NULL,       
+  sigla_proficiencia character varying(20) NOT NULL,      
+  objetivo character varying(400),      
+  como_escrever character varying(2000),      
+  site character varying(200) NOT NULL,      
+  aplicado_universidade boolean,      
+  valor_inscricao numeric(16,2) ,      
+  observacoes character varying(400),      
+  id_registro_cadastro integer NOT NULL,      
+  ativo boolean,      
+  CONSTRAINT id_proficiencia_pkey PRIMARY KEY (id_proficiencia),      
+  CONSTRAINT proficiencia_id_registro_cadastro_fkey FOREIGN KEY (id_registro_cadastro)      
+      REFERENCES comum.registro_entrada (id_entrada) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION      
+)      
+WITH (      
+  OIDS=FALSE      
+);      
+;    
+  
+ </pre>
+Revisão:178456
+U   trunk/SIGAATESTS/.classpath
+U   trunk/SIGAATESTS/src/br/ufrn/sigaa/AllTests.java
+U   trunk/SIGAATESTS/stricto_sensu_test/
+U   trunk/SIGAATESTS/stricto_sensu_test/br/
+U   trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/
+U   trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/
+U   trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/
+U   trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/StrictoSensuAllTests.java
+U   trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/negocio/
+U   trunk/SIGAATESTS/stricto_sensu_test/br/ufrn/ensino/stricto/negocio/ProcessadorVersaoTrabalhoTest.java
+
+
+Revisão:178453
+U   trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/jsf/GerenciarTeseDissertacaoStrictoMBean.java
+
+
+Revisão:178418
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/stricto/producao_academica/acompanhamento_procedimentos_apos_defesa_include.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/stricto/versao_trabalho/lista.jsp
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/publicacoes_academicas/jsf/BuscaPadraoPublicacaoAcademicaBibliotecaMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/publicacoes_academicas/jsf/TermoAutorizacaoPublicacaoMBean.java
+U   trunk/SIGAA/ensino/br/ufrn/sigaa/ensino/defesa/dominio/StatusVersaoTrabalho.java
+U   trunk/SIGAA/ensino/br/ufrn/sigaa/ensino/defesa/dominio/VersaoTrabalho.java
+U   trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/jsf/AcompanhamentoProcedimentosAposDefesaMBean.java
+U   trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/jsf/GerenciarTeseDissertacaoStrictoMBean.java
+U   trunk/SIGAA/stricto_sensu/br/ufrn/sigaa/ensino/stricto/negocio/ProcessadorVersaoTrabalho.java
+
+
+
+Revisão:178672
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosRelatorioAcordosCooperacaoInternacional.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioAcordosCooperacaoInternacionalMBean.java
+
+
+Revisão:178570
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosRelatorioAcordosCooperacaoInternacional.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioAcordosCooperacaoInternacionalMBean.java
+
+Revisão 178568 
+
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosRelatorioAcordosCooperacaoInternacional.jsp
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/relatorioAcordosCooperacaoInternacional.jsp
+A   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioAcordosCooperacaoInternacionalMBean.java
+
+
+
+
+
+
+Obs. Segue solicitação de atualização de base de dados.
+
+Revisão:178413
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosObservacoesAcordosCooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/formObservacoesAcordosCooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/AcordoCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ObservacoesTarefasAcordosCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ObservacoesTarefasAcordosCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasAcordosCooperacaoMBean.java
+
+
+Revisão:178417
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasAcordosCooperacaoMBean.java
+
+
+Revisão:178533
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosObservacoesAcordosCooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/formObservacoesAcordosCooperacao.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/AcordoCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ObservacoesTarefasAcordosCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasAcordosCooperacaoMBean.java
+
+
+
+Revisão:178367
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosObservacoesRedesDeCooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/formObservacoesRedesDeCooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ObservacoesTarefasRedesCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/RedeCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/ObservacoesTarefasRedesCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasRedesDeCooperacaoMBean.java
+
+
+Revisão:178412
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/filtrosObservacoesRedesDeCooperacao.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/formObservacoesRedesDeCooperacao.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/ObservacoesTarefasRedesCooperacaoDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasRedesDeCooperacaoMBean.java
+
+
+Revisão:178416
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ObservacoesTarefasRedesDeCooperacaoMBean.java
+
+
+
+Revisão 178012 por jessica.cabral
+
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/MaterialInformacionalDao.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimo.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/util/ReservaMaterialBibliotecaUtil.java
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimoTest.java
+
+
+Revisão:177143
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/processos_tecnicos/pesquisas_acervo/pesquisa_interna/buscaInternaAcervo.jsp
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/SolicitarReservaMaterialBibliotecaMBean.java
+
+
+Revisão:177271
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorCancelaReservaMaterialBiblioteca.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimo.java
+
+
+Revisão:177190
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimo.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/util/ReservaMaterialBibliotecaUtil.java
+
+
+Revisão:176642
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorSolicitaReservaMaterialTest.java
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/util/ReservaMaterialBibliotecaUtilTest.java
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/util/UtilAllTests.java
+
+
+Revisão:176586
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/listaParametrosCirculacaoSistemaBiblioteca.jsp
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/ReservaMaterialBibliotecaDao.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/SolicitarReservaMaterialBibliotecaMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/remoto/BibliotecaCirculacaoDesktopRemoteServiceImpl.java
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/BibliotecaTestData.java
+
+
+
+Revisão 176571 
+
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/CirculacaoAllTests.java
+A   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorSolicitaReservaMaterialTest.java
+
+
+
+Revisão 176646
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/WEB-INF/jsp/include/beta/include/discente/menu.jsp
+
+
+Revisão 176572 
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/Biblioteca/form.jsp
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/avisoReservaMaterial.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/confirmaReservaMaterialBiblioteca.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/devolucao.jsp
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/listaBibliotecasDisponiveisParaReservaMaterial.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/visualizaReservasMateriaisBibliotecaDeUmTitulo.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/circulacao/visualizaReservasMaterialBibliotecaDeUmUsuario.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/menus/modulo_biblioteca_servidor.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/portais/discente/menu_discente.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/portais/docente/menu_docente.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/parametros/dominio/ParametrosBiblioteca.java
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/BibliotecaDao.java
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/MaterialInformacionalDao.java
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/ReservaMaterialBibliotecaDao.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/dominio/ReservaMaterialBiblioteca.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/ComunicarMaterialPerdidoMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/ModuloCirculacaoMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/SolicitarReservaMaterialBibliotecaMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/MovimentoSolicitaReservaMaterialBiblioteca.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorDesfazOperacao.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorDevolveEmprestimo.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorDevolveEmprestimoMaterialPerdido.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorEstornaEmprestimo.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRealizaEmprestimo.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorRenovaEmprestimo.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/negocio/ProcessadorSolicitaReservaMaterialBiblioteca.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/remoto/BibliotecaCirculacaoDesktopRemoteServiceImpl.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/dominio/ServicosInformacaoReferenciaBiblioteca.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/jsf/SolicitacaoEmprestimoEntreBibliotecasMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/negocio/ProcessadorAtenderSolicatacaoEmprestimoEntreBiblioteca.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/negocio/ProcessadorConfirmarRetornoMaterialEmprestimoEntreBibliotecas.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/informacao_referencia/negocio/ProcessadorSolicitaEmprestimoEntreBibliotecas.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/jsf/ConfiguraParametrosCirculacaoMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/processos_tecnicos/pesquisa/jsf/DetalhesMateriaisMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/timer/VerificaReservasMaterialBibliotecaVencidasTimer.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/util/ReservaMaterialBibliotecaUtil.java
+U   trunk/SIGAA/mobile/br/ufrn/sigaa/mobile/touch/jsf/BuscaAcervoTouchMBean.java
+
+
+Revisão 176586 
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/biblioteca/listaParametrosCirculacaoSistemaBiblioteca.jsp
+U   trunk/SIGAA/arq_dao/br/ufrn/sigaa/arq/dao/biblioteca/ReservaMaterialBibliotecaDao.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/jsf/SolicitarReservaMaterialBibliotecaMBean.java
+U   trunk/SIGAA/biblioteca/br/ufrn/sigaa/biblioteca/circulacao/remoto/BibliotecaCirculacaoDesktopRemoteServiceImpl.java
+U   trunk/SIGAATESTS/biblioteca_test/br/ufrn/sigaa/biblioteca/BibliotecaTestData.java
+
+
+Revisão:177870
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+
+
+Revisão:177935
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+
+
+Revisão:177899
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/lista.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/NoticiasInternacionaisDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+
+
+Revisão:177798
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiaPublicarEm.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/TipoNoticia.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/negocio/ProcessadorNoticiaInternacional.java
+
+
+Revisão:176984
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/lista.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/NoticiasInternacionaisDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/negocio/ProcessadorNoticiaInternacional.java
+
+
+
+Revisão:176935
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioMobilidadeAcademicaMBean.java
+
+
+Revisão:177354
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/paginaFiltrosRelatorioMobilidadeAcademica.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/relatorioMobilidadeAcademica.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RelatorioMobilidadeAcademicaMBean.java
+
+
+Revisão:177634
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/paginaFiltrosRelatorioMobilidadeAcademica.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/mobilidade_academica/relatorioMobilidadeAcademica.jsp
+
+
+
+Revisão:176684
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/struts/EntrarRelacoesInternacionaisAction.java
+
+
+Revisão:176672
+U   trunk/SIGAA/arq/br/ufrn/arq/seguranca/SigaaPapeis.java
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiaPais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiaPublicarEm.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/negocio/ProcessadorNoticiaInternacional.java
+
+
+Revisão:177899
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/lista.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/NoticiasInternacionaisDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+
+
+Revisão:177869
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/alterarNoticia.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/form.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/lista.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/NoticiasInternacionaisDao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+
+
+Revisão:177796
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/alterarNoticia.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/form.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/noticias/lista.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dao/NoticiasInternacionaisDao.java
+D   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiaPais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionais.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/NoticiasInternacionaisDocumentos.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/TipoNoticia.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/NoticiasInternacionaisMBean.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/negocio/ProcessadorNoticiaInternacional.java
+
+
+
+
+Revisão 177636 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/form_cadastro_rede.jsp
+
+
+Revisão 177610 por andersonlimac
+
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/form_cadastro_rede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/lista_rede_cooperacao.jsp
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/RedesCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RedesCooperacaoMBean.java
+
+
+Revisão 177458 por andersonlimac
+
+A   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/acordo_cooperacao/form_cadastro_rede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/relacoes_internacionais/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/dao/hibernate.cfg.xml
+A   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/dominio/RedesCooperacao.java
+U   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/ProgramaMobilidadeMBean.java
+A   trunk/SIGAA/relacoes_internacionais/br/ufrn/sigaa/ensino/internacionalizacao/jsf/RedesCooperacaoMBean.java
+
+<pre name="code" class="sql"> 
+
+DROP TABLE internacionalizacao.redes_cooperacao;      
+CREATE TABLE internacionalizacao.redes_cooperacao      
+(      
+  id_rede_cooperacao integer NOT NULL,      
+  nome_instituicao character varying(200) NOT NULL,       
+  sigla_instituicao character varying(20) NOT NULL,      
+  cnpj bigint NOT NULL,       
+  ano integer NOT NULL,      
+  data_assinatura timestamp without time zone,      
+  programa_mobilidade_academica boolean,      
+  objetivo character varying(400),      
+  direito_associado character varying(2000),      
+  deveres_associado character varying(2000),      
+  site character varying(200) NOT NULL,      
+  nome_responsavel_cooperacao character varying(200),      
+  contato_secretaria character varying(200),      
+  telefone character varying(60),      
+  email character varying(200),      
+  pagamento_anuidade boolean,      
+  valor integer ,      
+  observacoes character varying(400),      
+  id_registro_cadastro integer NOT NULL,      
+  ativo boolean,      
+  CONSTRAINT id_rede_cooperacao_pkey PRIMARY KEY (id_rede_cooperacao),      
+  CONSTRAINT redes_cooperacao_id_registro_cadastro_fkey FOREIGN KEY (id_registro_cadastro)      
+      REFERENCES comum.registro_entrada (id_entrada) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION      
+)      
+WITH (      
+  OIDS=FALSE      
+);      
+;      
+      
+      
+DROP TABLE internacionalizacao.redes_cooperacao_programa_mobilidade;      
+CREATE TABLE internacionalizacao.redes_cooperacao_programa_mobilidade      
+(      
+  id_rede_cooperacao integer NOT NULL,      
+  id_programa_mobilidade integer NOT NULL,      
+  CONSTRAINT programa_mobilidade_rede_fkey FOREIGN KEY (id_programa_mobilidade)      
+      REFERENCES internacionalizacao.programa_mobilidade (id_programa_mobilidade) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION,      
+  CONSTRAINT redes_cooperacao_paises_programa_fkey FOREIGN KEY (id_rede_cooperacao)      
+      REFERENCES internacionalizacao.redes_cooperacao (id_rede_cooperacao) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION      
+)      
+WITH (      
+  OIDS=FALSE      
+);      
+      
+DROP TABLE internacionalizacao.redes_cooperacao_instituicoes      
+      
+CREATE TABLE internacionalizacao.redes_cooperacao_instituicoes      
+(      
+  id_rede_cooperacao integer NOT NULL,      
+  id integer NOT NULL,      
+  CONSTRAINT instituicao_rede_fkey FOREIGN KEY (id)      
+      REFERENCES comum.instituicoes_ensino (id) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION,      
+  CONSTRAINT redes_cooperacao_paises_programa_fkey FOREIGN KEY (id_rede_cooperacao)      
+      REFERENCES internacionalizacao.redes_cooperacao (id_rede_cooperacao) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION      
+)      
+WITH (      
+  OIDS=FALSE      
+);      
+      
+DROP TABLE internacionalizacao.redes_cooperacao_paises;      
+CREATE TABLE internacionalizacao.redes_cooperacao_paises      
+(      
+  id_rede_cooperacao integer NOT NULL,      
+  id_pais integer NOT NULL,      
+  CONSTRAINT programa_mobilidade_paises_pais_fkey FOREIGN KEY (id_pais)      
+      REFERENCES comum.pais (id_pais) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION,      
+  CONSTRAINT redes_cooperacao_paises_programa_fkey FOREIGN KEY (id_rede_cooperacao)      
+      REFERENCES internacionalizacao.redes_cooperacao (id_rede_cooperacao) MATCH SIMPLE      
+      ON UPDATE NO ACTION ON DELETE NO ACTION      
+)      
+WITH (      
+  OIDS=FALSE      
+);      
+      
+INSERT into internacionalizacao.programa_mobilidade (id_programa_mobilidade ,      
+  nome ,      
+  sigla ,      
+  areas_envolvidas ,      
+  requisitos ,      
+  status_programa_mobilidade ,      
+  bolsa ,      
+  como_inscrever ,      
+  beneficios ,      
+  edital ,      
+  documentos_exigidos ,      
+  observacao ,      
+  id_registro_cadastro ,      
+  data_cadastro ,      
+  ativo ) values (-1,'TODOS','TODOS','NÃO INFORMADO','NÃO INFORMADO',0,FALSE,'NÃO INFORMADO','NÃO INFORMADO','NÃO INFORMADO','NÃO INFORMADO','NÃO INFORMADO',1,now(),FALSE);      
+      
+insert into comum.pais (id_pais,nome,nacionalidade,cod_pais_pingifes)values(-2,'TODOS','','');  
+
+ </pre>
+Obs.Segue atualização na base de dados.
+
+Revisão:172250
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+
+
+Revisão:172182
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/modulo/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CursoAssociadoDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoComponenteRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java
+
+
+
+obs. segue atualização na base de dados. 
+
+Revisão:173337
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/alteraCurriculoRede.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/ComponenteCurricularRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CurriculoRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoComponenteRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java
+
+
+Revisão:174514
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/alteraCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/listaCurriculoRede.jsp
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/ComponenteCurricularRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java
+
+
+Revisão:172967
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/listaComponenteCurricularRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/alteraCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/listaCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/modulo/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/ComponenteCurricularRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CurriculoRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CursoAssociado.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ComponenteCurricularRedeMBean.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java
+
+
+Revisão:174580
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/listaCurriculoRede.jsp
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CurriculoRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoComponenteRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ComponenteCurricularRedeMBean.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java
+
+Revisão:172250
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+
+
+Revisão:172182
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/adicionaComponentesRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/cadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/estrutura_curricular_rede/confirmaCadastroCurriculoRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/modulo/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorEstruturaCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/CursoAssociadoDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoComponenteRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/CurriculoRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/EstruturaCurricularRedeMBean.java
+
+
+
+
+Revisão:171850
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/listaComponenteCurricularRede.jsp
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ComponenteCurricularRedeMBean.java
+
+
+Revisão:170979
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/alteraComponenteCurricularRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/cadastroComponenteCurricularRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/listaComponenteCurricularRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/modulo/menu.jsp
+U   trunk/SIGAA/arq/br/ufrn/sigaa/arq/negocio/SigaaListaComando.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/MovimentoComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/ComponenteCurricularRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/ComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dominio/ProgramaRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ComponenteCurricularRedeMBean.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ProgramaRedeMBean.java
+
+
+Revisão:171715
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/cadastroComponenteCurricularRede.jsp
+U   trunk/SIGAA/app/sigaa.ear/sigaa.war/ensino_rede/componente_curricular_rede/listaComponenteCurricularRede.jsp
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/academico/negocio/ProcessadorComponenteCurricularRede.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/dao/ComponenteCurricularRedeDao.java
+U   trunk/SIGAA/ensino_rede/br/ufrn/sigaa/ensino_rede/jsf/ComponenteCurricularRedeMBean.java
+
+
+
