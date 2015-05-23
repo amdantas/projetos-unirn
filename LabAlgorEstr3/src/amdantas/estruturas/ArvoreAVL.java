@@ -118,47 +118,10 @@ public class ArvoreAVL extends ArvoreBinaria  {
 		}
 	}
 	public void remover(int info) {
-		NoArvore achado = buscar(info);
-		if (achado != null)
-			removerAVL(achado);
+		NoArvore no = buscar(info);
+		NoArvore pai = no.getNoPai();
+		super.remover(info);
+		balancearArvore(pai);
 	}
- 
-	private void removerAVL(NoArvore no) {
-		NoArvore aux;
- 
-		if (no.getEsquerda() == null || no.getDireita() == null) {
- 
-			if (no.getNoPai() == null) {
-				this.raiz = null;
-				no = null;
-				return;
-			}
-			aux = no;
- 
-		} else {
-			aux = no.getMaisProfundoEsquerdo();
-			no.setInfo(aux.getInfo());
-		}
- 
-		NoArvore p;
-		if (aux.getEsquerda() != null) {
-			p = aux.getEsquerda();
-		} else {
-			p = aux.getDireita();
-		}
- 
-		if (p != null) {
-			p.setNoPai(aux.getNoPai());
-		}
- 
-		if (aux.getNoPai() == null) {
-			this.raiz = p;
-		} else {
-			substituiFilhoNoPai(aux, p);
-			balancearArvore(aux.getNoPai());
-		}
-		aux = null;
-	}
-	
 	
 }

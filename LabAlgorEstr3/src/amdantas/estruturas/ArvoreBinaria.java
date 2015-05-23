@@ -10,16 +10,16 @@ public class ArvoreBinaria {
 		exibirPreOrdem(raiz);
 	}
 	
-	public void exibirPosOrdem() {
-		exibirPosOrdem(raiz);
-	}
-	
 	private void exibirPreOrdem(NoArvore no) {
 		if (no != null) {
 			System.out.print("["+no.getInfo()+"]");
 			exibirPreOrdem(no.getEsquerda());
 			exibirPreOrdem(no.getDireita());
 		}
+	}
+	
+	public void exibirPosOrdem() {
+		exibirPosOrdem(raiz);
 	}
 	
 	private void exibirPosOrdem(NoArvore no) {
@@ -76,13 +76,21 @@ public class ArvoreBinaria {
 		NoArvore no = buscar(info);
 		if (no.isSemFilho()) {
 			//Nó possui duas sub-árvores vazias
-			removerNoSemFilho(no);
+			NoArvore noPai = no.getNoPai();
+			if (noPai.getEsquerda() == no)
+				noPai.setEsquerda(null);
+			else
+				noPai.setDireita(null);	
 		} else if (no.getEsquerda() != null && no.getDireita() != null) {
 			//Nó possui duas sub-árvores cheias
 			NoArvore sucessor = no.getSucessor();
 			no.setInfo(sucessor.getInfo());
 			if (sucessor.isSemFilho()) {
-				removerNoSemFilho(sucessor);
+				NoArvore noPai = sucessor.getNoPai();
+				if (noPai.getEsquerda() == sucessor)
+					noPai.setEsquerda(null);
+				else
+					noPai.setDireita(null);	
 			} else {
 				removerNoComUmFilho(sucessor);
 			}

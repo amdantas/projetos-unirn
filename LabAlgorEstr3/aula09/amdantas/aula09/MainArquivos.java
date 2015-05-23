@@ -1,7 +1,6 @@
 package amdantas.aula09;
 
 import java.io.BufferedReader;
-import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,7 +15,7 @@ public class MainArquivos {
 
 	public static void main(String[] args) {
 		
-		File diretorio =  new File("C:\\AulaArquivos");
+		File diretorio =  new File("C:\\AulaArquivos\\sdsd\\sdsd");
 		
 		if (!diretorio.exists()) {
 			diretorio.mkdir();
@@ -36,14 +35,6 @@ public class MainArquivos {
 		
 //		se quiser remover o arquivo
 //		arquivo.delete();
-		
-		File listaArquivos = new File("C:\\Windows");
-		for (File arq : listaArquivos.listFiles()) {
-			if (arq.isDirectory()) {
-				System.out.print("++");
-			}
-		    System.out.println(arq);
-		}
 		
 		
 		
@@ -90,12 +81,16 @@ public class MainArquivos {
 			
 			Aluno andre = new Aluno("Andre", 201512323);
 			
+			Aluno[] vetor = new Aluno[] {
+					andre, 
+					new Aluno("joao", 2093293),
+					new Aluno("maria", 209329333)
+			};
+			
 			File arq = new File (diretorio, "aluno_obj.dat");
 			FileOutputStream fout = new FileOutputStream(arq);
             ObjectOutputStream oos = new ObjectOutputStream(fout);
-            oos.writeObject(andre);
-            oos.writeObject(new Aluno("joao", 2093293));
-            oos.writeObject(new Aluno("maria", 2093293));
+            oos.writeObject(vetor);
 			
             oos.close();
             fout.close();
@@ -103,19 +98,21 @@ public class MainArquivos {
             
             FileInputStream fis = new FileInputStream(arq);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            Aluno alunoDoArquivo = (Aluno) ois.readObject();
-            System.out.println(alunoDoArquivo.getNome());
-            
-            Object obj = ois.readObject();
-            try {
-            	do {
-                	Aluno aluno = (Aluno) obj;
-                	System.out.println(aluno.getNome());
-                	obj = ois.readObject();
-                } while (obj != null);
-            } catch (EOFException e) {
-            	
-            }
+            Aluno[] v = (Aluno[]) ois.readObject();
+            for (Aluno aluno : v) {
+				System.out.println(aluno.getMatricula());
+				a.setNome("nome alterado");
+			}
+//            Object obj = ois.readObject();
+//            try {
+//            	do {
+//                	Aluno aluno = (Aluno) obj;
+//                	System.out.println(aluno.getNome());
+//                	obj = ois.readObject();
+//                } while (obj != null);
+//            } catch (EOFException e) {
+//            	
+//            }
             
             
             ois.close();

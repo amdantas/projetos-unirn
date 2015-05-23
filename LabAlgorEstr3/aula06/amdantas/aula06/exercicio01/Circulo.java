@@ -8,6 +8,10 @@ public class Circulo implements FiguraOperacoesInt {
 		raio = r;
 	}
 	
+	public void novo() {
+		
+	}
+	
 	@Override
 	public double calcularArea() {
 		return Math.PI * Math.pow(raio, 2.0);
