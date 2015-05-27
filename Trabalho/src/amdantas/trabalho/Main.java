@@ -11,6 +11,12 @@ public class Main {
 		eddArvore.adicionar(3);
 		eddArvore.adicionar(5);
 		eddArvore.adicionar(6);
+		eddArvore.adicionar(1);
+		eddArvore.exibir();
+		eddArvore.remover(5);
+		eddArvore.adicionar(10);
+		eddArvore.exibir();
+		eddArvore.remover(3);
 		eddArvore.exibir();
 		
 		EstruturaDeDados eddLista = new ListaDupla();
@@ -19,6 +25,10 @@ public class Main {
 		eddLista.adicionar(6);
 		eddLista.exibir();
 		eddLista.remover(5);
+		eddLista.exibir();
+		eddLista.adicionar(10);
+		eddLista.exibir();
+		eddLista.remover(3);
 		eddLista.exibir();
 		
 		gravarEstruturaEmArquivo(eddArvore, "arquivo_arvore.txt");
